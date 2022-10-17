@@ -10,6 +10,7 @@
     --color-primary: #757575;
     --color-secondary: #212121;
     --color-inverted: #ffffff;
+    --color-social-icons: #afb1b8;
 }
 
 /* Body */
@@ -46,54 +47,12 @@ img {
     height: auto;
 }
 
-/* .list {
-    padding: 0;
-    margin: 0;
-    list-style: none;
-} */
-
 .container {
     max-width: 1200px;
     width: 100%;
     padding-left: 15px;
     padding-right: 15px;
     margin: 0 auto;
-}
-
-/* Header */
-/* .header {
-} */
-
-.header-container {
-    display: flex;
-    flex-grow: 1;
-    align-items: center;
-    gap: 50px;
-}
-
-.header-nav {
-    flex-grow: 1;
-    display: flex;
-    align-items: center;
-    justify-content: flex-start;
-    gap: 93px;
-}
-
-.header-menu {
-    display: flex;
-    gap: 50px;
-}
-
-.header-nav-second {
-    display: flex;
-    align-items: flex-end;
-    justify-content: flex-end;
-    gap: 344px;
-}
-
-.link-contact {
-    display: flex;
-
 }
 
 /* Logo */
@@ -141,7 +100,34 @@ img {
     margin-bottom: 20px;
 }
 
-/* Navigation */
+/* Header */
+.header-container {
+    display: flex;
+    flex-grow: 1;
+    align-items: center;
+    gap: 50px;
+}
+
+.header-nav {
+    flex-grow: 1;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    gap: 93px;
+}
+
+.header-menu {
+    display: flex;
+    gap: 50px;
+}
+
+.header-nav-second {
+    display: flex;
+    align-items: flex-end;
+    justify-content: flex-end;
+    gap: 344px;
+}
+
 .link {
     color: var(--color-secondary);
     font-family: 'Roboto', sans-serif;
@@ -175,6 +161,8 @@ img {
     letter-spacing: 0.02em;
     margin: auto;
     padding: 32px 0;
+    display: flex;
+    align-items: center;
 }
 
 .link-contact:hover {
@@ -191,11 +179,39 @@ img {
     color: var(--color-brand);
 }
 
-/* font-weight: 500;
-    font-size: 14px;
-    line-height: 1.14;
-    letter-spacing: 0.02em;
-    padding: 32px 0; */
+.header-menu-envelope {
+    display: flex;
+    align-items: center;
+    justify-content: baseline;
+    fill: var(--color-primary);
+    margin-right: 10px;
+}
+
+.link-contact:hover .header-menu-envelope {
+    fill: var(--color-brand);
+}
+
+.link-contact:focus .header-menu-envelope {
+    fill: var(--color-brand);
+}
+
+.header-menu-smartphone {
+    display: flex;
+    align-items: center;
+    justify-content: baseline;
+    fill: var(--color-primary);
+    margin-right: 10px;
+}
+
+.link-contact:hover .header-menu-smartphone {
+    fill: var(--color-brand);
+}
+
+.link-contact:focus .header-menu-smartphone {
+    fill: var(--color-brand);
+}
+
+
 
 /* Hero */
 .section-hero {
@@ -205,6 +221,11 @@ img {
     text-align: center;
     padding-top: 200px;
     padding-bottom: 200px;
+    background-image: linear-gradient(rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)),
+        url('../images/hero-background.jpg');
+    background-repeat: no-repeat;
+    background-size: 1600px;
+    background-position: center;
 }
 
 .hero-container {
@@ -276,6 +297,24 @@ img {
     display: flex;
     gap: 30px;
     justify-content: space-between;
+}
+
+.advantages-icon {
+    /* width: 270; */
+    height: 120px;
+    background-color: var(--color-background-light);
+    border-radius: 4px;
+    display: flex;
+    margin-bottom: 30px;
+    justify-content: center;
+    align-items: center;
+}
+
+.icon {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 25 100;
 }
 
 .list-subtitle {
@@ -372,9 +411,109 @@ img {
     line-height: 1.19;
     text-align: center;
     letter-spacing: 0.03em;
+    margin-bottom: 16px;
+}
+
+.social-icons-list {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.social-icons-sublist {
+    height: 44px;
+    width: 44px;
+    padding: 0;
+    border: none;
+    border-radius: 50%;
+    fill: var(--color-background);
+    background-color: var(--color-background);
+    display: flex;
+    margin-bottom: 30px;
+    cursor: pointer;
+    padding: 12px 12px;
+    margin-right: 10px;
+}
+
+.social-icons-sublist:last-child {
+    margin-right: 0;
+}
+
+.social-icons-sublist:hover {
+    background-color: var(--color-brand);
+}
+
+.social-icons-sublist:hover .soc-icons {
+    fill: var(--color-inverted);
+}
+
+.social-icons-sublist:focus {
+    background-color: var(--color-brand);
+}
+
+.social-icons-sublist:focus .soc-icons {
+    fill: var(--color-inverted);
+}
+
+.soc-icons {
+    fill: var(--color-social-icons);
+}
+
+/* Постійні клієнти */
+.clients-list {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.clients-sublist {
+    width: 170px;
+    height: 92px;
+    border: 1px solid #afb1b8;
+    border-radius: 4px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-right: 30px;
+    cursor: pointer;
+}
+
+.clients-sublist:last-child {
+    margin-right: 0;
+}
+
+
+.clients-sublist:hover {
+    border-color: var(--color-brand);
+}
+
+.clients-sublist:hover .icon {
+    fill: var(--color-brand);
+}
+
+.clients-sublist:focus {
+    border-color: var(--color-brand);
+}
+
+.clients-sublist:focus .icon {
+    fill: var(--color-brand);
+}
+
+.icon {
+    fill: var(--color-social-icons);
+
 }
 
 /* Footer */
+.footer-container {
+    display: flex;
+    align-items: baseline;
+}
+
+.footer-address {
+    margin-right: 70px;
+}
+
 span>.logo-accent,
 span>.logo-white {
     margin-bottom: 20px;
@@ -447,6 +586,44 @@ span>.logo-white {
 
 .address-contact:focus {
     color: var(--color-brand);
+}
+
+.subscription-title {
+    display: block;
+    margin-top: 0;
+    margin-bottom: 20px;
+    font-weight: 700;
+    font-size: 14px;
+    line-height: 1.14;
+    letter-spacing: 0.03em;
+    text-transform: uppercase;
+    color: var(--color-inverted);
+}
+
+.subscription-list {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+}
+
+.subscription-icons {
+    display: flex;
+    justify-content: center;
+    align-items: baseline;
+    width: 44px;
+    height: 44px;
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 50%;
+    padding: 12px 12px;
+}
+
+.subscription-icons:hover {
+    background-color: var(--color-brand);
+}
+
+.footer-icon {
+    fill: var(--color-inverted);
 }
 
 /* Portfolio */
